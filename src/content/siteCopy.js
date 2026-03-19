@@ -1,10 +1,10 @@
 export const siteCopy = {
   es: {
-    meta: { title: "ViralDental.marketing | Sistemas digitales para negocios modernos" },
+    meta: { title: "ViralDental.marketing | Sistemas digitales para consultorios dentales modernos" },
     ui: { languageLabel: "Idioma" },
     brand: {
       name: "ViralDental.marketing",
-      tagline: "Digital systems studio · Louisville, Kentucky",
+      tagline: "Estudio de sistemas digitales · Louisville, Kentucky",
       headerCta: "Reservar consulta",
     },
     nav: [
@@ -13,53 +13,53 @@ export const siteCopy = {
       { label: "Contacto", href: "#contact" },
     ],
     hero: {
-      eyebrow: "Estudio de sistemas digitales · Louisville, Kentucky",
-      title: "Sistemas digitales para negocios modernos",
-      subtitle: "Sitios web, automatización e infraestructura de leads diseñados para convertir atención en clientes.",
-      primaryCta: { label: "Explorar la plataforma", href: "#platform" },
+      eyebrow: "Estudio de marketing digital · Louisville, Kentucky",
+      title: "Marketing digital para consultorios dentales modernos",
+      subtitle: "Sitios web, automatización e infraestructura de leads diseñados para convertir atención en pacientes.",
+      primaryCta: { label: "Reservar consulta", href: "https://calendly.com/viraldentalmarketing" },
       secondaryCta: { label: "Ver trabajos", href: "#work" },
     },
     system: {
-      title: "Un sistema de crecimiento conectado",
-      text: "Desde la primera visita hasta el seguimiento, cada paso del recorrido del cliente debe avanzar sin fricción.",
-      flow: ["Tráfico", "Sitio web", "Captura de leads", "Automatización", "CRM", "Cliente"],
+      title: "El sistema de crecimiento construido para DSOs",
+      text: "Desde el momento en que un paciente ve tu anuncio hasta su primera visita y más allá, cada paso del recorrido debe sentirse sin esfuerzo.",
+      flow: ["Tráfico", "Sitio web", "Captura de leads", "Automatización", "CRM", "Paciente"],
     },
     problem: {
-      title: "La mayoría de los negocios pierden oportunidades antes de que empiece la conversación",
+      title: "La mayoría de los consultorios dentales pierden pacientes nuevos antes de que reserven",
       items: [
         {
-          title: "Presencia desactualizada",
-          text: "Una presencia digital débil reduce la confianza antes de que la conversación siquiera comience.",
+          title: "Primera impresión falla",
+          text: "Un sitio web desactualizado hace que los pacientes cuestionen tu calidad antes de que tengas oportunidad de impresionar.",
         },
         {
-          title: "Leads perdidos",
-          text: "Los visitantes muestran interés, pero las rutas de contacto lentas o poco claras hacen desaparecer las oportunidades.",
+          title: "Fugas en el embudo",
+          text: "Pacientes potenciales visitan tu sitio pero no llaman — y sin captura automatizada, se pierden para siempre.",
         },
         {
-          title: "Seguimiento lento",
-          text: "Sin automatización ni estructura, las consultas tibias se enfrían antes de recibir atención.",
+          title: "Respuesta lenta o nula",
+          text: "Los leads tibios se enfrían cuando no se devuelven los mensajes de voz o las llamadas tardan horas en lugar de minutos.",
         },
       ],
     },
     platform: {
-      eyebrow: "Plataforma ViralDental.marketing",
-      title: "Infraestructura digital diseñada para atraer, capturar y convertir.",
+      eyebrow: "Plataforma Viral Dental Marketing",
+      title: "Convierte más visitantes del sitio web en pacientes que pagan, automáticamente.",
       modules: [
         {
-          title: "Website System",
-          text: "Sitios premium construidos para comunicar valor con claridad y generar confianza inmediata.",
+          title: "Sitios web que atraen pacientes",
+          text: "Sitios construidos para generar confianza al instante, responder preguntas de los pacientes y hacer sonar el teléfono.",
         },
         {
-          title: "Lead Capture",
-          text: "Formularios inteligentes y rutas de mensajería que convierten visitas en consultas reales.",
+          title: "Captura de leads que convierte",
+          text: "Formularios inteligentes y click-to-text que capturan cada visitante, incluso cuando no llaman.",
         },
         {
-          title: "Automatización",
-          text: "Automatización SMS y flujos de trabajo que responden al instante.",
+          title: "Automatización de seguimiento instantáneo",
+          text: "Secuencias de SMS y email 24/7 que responden en segundos y nunca dejan enfriar un lead.",
         },
         {
-          title: "CRM Structure",
-          text: "Pipelines organizados que aseguran que cada oportunidad sea rastreada y avance.",
+          title: "Pipeline de nuevos pacientes",
+          text: "Un CRM construido para odontología que rastrea cada lead desde el primer clic hasta la primera visita.",
         },
       ],
     },
@@ -91,35 +91,35 @@ export const siteCopy = {
       ],
     },
     technology: {
-      title: "Tecnología detrás del sistema",
-      text: "El objetivo no es tecnología para mostrar. Es tecnología para construir infraestructura digital más rápida, limpia y confiable.",
-      items: ["React", "Next.js", "Node.js", "Automation workflows", "Cloud infrastructure", "Messaging systems", "AI integration"],
+      title: "Anuncios que entregan. Software que hace seguimiento.",
+      text: "Google, Facebook y TikTok traen nuevos pacientes a tu sitio. Nosotros nos aseguramos de que realmente reserven — con automatización moderna que funciona junto con Dentrix, Eaglesoft u Open Dental.",
+      items: ["Anuncios Google/Facebook/TikTok", "Sitios web que convierten", "Recepcionista IA", "Captura de leads 24/7", "Seguimientos de texto instantáneos", "Mensajería bidireccional con PMS", "Automatización de recall", "Links de pago por texto"],
     },
     cta: {
-      title: "Construí la base digital que tu negocio necesita",
-      text: "Ya sea que necesites un sitio más sólido, mejor captura de leads o sistemas de seguimiento más inteligentes, ViralDental.marketing te ayuda a construirlo con claridad.",
+      title: "Tu software trabaja más. Tú te enfocas en la odontología.",
+      text: "Deja de luchar con herramientas obsoletas. Agregamos automatización moderna a lo que ya usas — Dentrix, Eaglesoft, Open Dental, lo que sea.",
       primaryCta: "Reservar consulta",
-      email: "ferkmas88@gmail.com",
+      email: "hola@viraldental.marketing",
       location: "Louisville, Kentucky",
     },
     contact: {
-      formTitle: "Contame sobre tu negocio",
+      formTitle: "Cuéntanos sobre tu negocio",
       fields: {
         name: { placeholder: "Nombre" },
         email: { placeholder: "Email" },
-        message: { placeholder: "¿Qué necesitás resolver?" },
+        message: { placeholder: "¿Qué necesitas resolver?" },
       },
-      actions: { submit: "Reservar consulta", submitting: "Enviando...", direct: "Escribirme directo" },
+      actions: { submit: "Reservar consulta", submitting: "Enviando...", direct: "Escríbeme directo" },
       messages: {
-        incomplete: "Completá todos los campos.",
-        success: "Enviado. Te respondo pronto.",
-        localPreview: "Abrilo desde el sitio publicado.",
-        fallback: "Escribime directo a ferkmas88@gmail.com.",
+        incomplete: "Completa todos los campos antes de enviar.",
+        success: "Enviado. Te responderé pronto.",
+        localPreview: "Abre desde el sitio publicado.",
+        fallback: "Envíame un correo directo a ferkmas88@gmail.com.",
       },
     },
     footer: {
       copyright: "© {year} ViralDental.marketing.",
-      credit: "Estrategia, diseño y desarrollo por Fernando Martinez.",
+      credit: "Viral Dental Marketing",
     },
   },
 
@@ -148,26 +148,25 @@ export const siteCopy = {
       text: "From the moment a patient sees your ad to their first visit and beyond, every step of the journey should feel seamless.",
       flow: ["Traffic", "Website", "Lead Capture", "Automation", "CRM", "Customer"],
     },
-problem: {
-  title: "Most dental practices lose new patients before they ever book",
-  items: [
-    {
-      title: "First impression fails",
-      text: "An outdated website makes patients question your quality before you get a chance to impress.",
-    },
-    {
-      title: "Leaks in the funnel",
-      text: "Potential new patients visit your site but don't call — and without automated capture, they're gone forever.",
-    },
-    {
-      title: "Slow or no response",
-      text: "Warm leads go cold when voicemails aren't returned or follow-ups take hours instead of minutes.",
-    },
-  ],
-}
+    problem: {
+      title: "Most dental practices lose new patients before they ever book",
+      items: [
+        {
+          title: "First impression fails",
+          text: "An outdated website makes patients question your quality before you get a chance to impress.",
+        },
+        {
+          title: "Leaks in the funnel",
+          text: "Potential new patients visit your site but don't call — and without automated capture, they're gone forever.",
+        },
+        {
+          title: "Slow or no response",
+          text: "Warm leads go cold when voicemails aren't returned or follow-ups take hours instead of minutes.",
+        },
+      ],
     },
     platform: {
-      eyebrow: "Viral dental marketing Platform",
+      eyebrow: "Viral Dental Marketing Platform",
       title: "Turn more website visitors into paying patients automatically.",
       modules: [
         {
