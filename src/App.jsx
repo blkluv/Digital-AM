@@ -56,7 +56,7 @@ export default function App() {
       payload.append("email", form.email);
       payload.append("message", form.message);
       payload.append("_replyto", form.email);
-      payload.append("_subject", "New contact from Digital AM");
+      payload.append("_subject", "New contact from ViralDental.marketing");
       payload.append("_template", "table");
       const res = await fetch("https://formsubmit.co/ajax/ferkmas88@gmail.com", {
         method: "POST",

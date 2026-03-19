@@ -218,7 +218,7 @@ export default function PremiumHero({ copy, ui }) {
                   transition={{ duration: 0.45, delay: 0.14 + index * 0.06 }}
                   className="flow-surface rounded-[24px] border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-md"
                 >
-                  <div className="flow-child text-xs uppercase tracking-[0.28em] text-cyan-100/70">Digital AM</div>
+                  <div className="flow-child text-xs uppercase tracking-[0.28em] text-cyan-100/70">ViralDental.marketing</div>
                   <div className="flow-child mt-3 text-base font-semibold text-white">{item}</div>
                 </motion.div>
               ))}

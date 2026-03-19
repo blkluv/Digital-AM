@@ -1,9 +1,9 @@
 export const siteCopy = {
   es: {
-    meta: { title: "Digital AM | Sistemas digitales para negocios modernos" },
+    meta: { title: "ViralDental.marketing | Sistemas digitales para negocios modernos" },
     ui: { languageLabel: "Idioma" },
     brand: {
-      name: "Digital AM",
+      name: "ViralDental.marketing",
       tagline: "Digital systems studio · Louisville, Kentucky",
       headerCta: "Reservar consulta",
     },
@@ -42,7 +42,7 @@ export const siteCopy = {
       ],
     },
     platform: {
-      eyebrow: "Plataforma Digital AM",
+      eyebrow: "Plataforma ViralDental.marketing",
       title: "Infraestructura digital diseñada para atraer, capturar y convertir.",
       modules: [
         {
@@ -97,7 +97,7 @@ export const siteCopy = {
     },
     cta: {
       title: "Construí la base digital que tu negocio necesita",
-      text: "Ya sea que necesites un sitio más sólido, mejor captura de leads o sistemas de seguimiento más inteligentes, Digital AM te ayuda a construirlo con claridad.",
+      text: "Ya sea que necesites un sitio más sólido, mejor captura de leads o sistemas de seguimiento más inteligentes, ViralDental.marketing te ayuda a construirlo con claridad.",
       primaryCta: "Reservar consulta",
       email: "ferkmas88@gmail.com",
       location: "Louisville, Kentucky",
@@ -118,17 +118,17 @@ export const siteCopy = {
       },
     },
     footer: {
-      copyright: "© {year} Digital AM.",
+      copyright: "© {year} ViralDental.marketing.",
       credit: "Estrategia, diseño y desarrollo por Fernando Martinez.",
     },
   },
 
   en: {
-    meta: { title: "Digital AM | Digital systems for modern businesses" },
+    meta: { title: "ViralDental.marketing | Digital systems for modern dental practices" },
     ui: { languageLabel: "Language" },
     brand: {
-      name: "Digital AM",
-      tagline: "Digital systems studio · Louisville, Kentucky",
+      name: "ViralDental.marketing",
+      tagline: "Digital systems studio · Atlanta, Georgia",
       headerCta: "Book a consultation",
     },
     nav: [
@@ -137,9 +137,9 @@ export const siteCopy = {
       { label: "Contact", href: "#contact" },
     ],
     hero: {
-      eyebrow: "Digital systems studio · Louisville, Kentucky",
-      title: "Digital systems for modern businesses",
-      subtitle: "Websites, automation and lead infrastructure designed to convert attention into customers.",
+      eyebrow: "Digital marketing studio · Atlanta, Georgia",
+      title: "Digital marketing for modern dental practices",
+      subtitle: "Websites, automation and lead infrastructure designed to convert attention into patients.",
       primaryCta: { label: "Explore the platform", href: "#platform" },
       secondaryCta: { label: "View work", href: "#work" },
     },
@@ -166,7 +166,7 @@ export const siteCopy = {
       ],
     },
     platform: {
-      eyebrow: "Digital AM Platform",
+      eyebrow: "ViralDental.marketing Platform",
       title: "Digital infrastructure designed to attract, capture and convert.",
       modules: [
         {
@@ -221,7 +221,7 @@ export const siteCopy = {
     },
     cta: {
       title: "Build the digital base your business needs",
-      text: "Whether you need a stronger website, better lead capture or smarter follow-up systems, Digital AM helps you build it with clarity.",
+      text: "Whether you need a stronger website, better lead capture or smarter follow-up systems, ViralDental.marketing helps you build it with clarity.",
       primaryCta: "Book a consultation",
       email: "ferkmas88@gmail.com",
       location: "Louisville, Kentucky",
@@ -242,7 +242,7 @@ export const siteCopy = {
       },
     },
     footer: {
-      copyright: "© {year} Digital AM.",
+      copyright: "© {year} ViralDental.marketing.",
       credit: "Strategy, design and development by Fernando Martinez.",
     },
   },

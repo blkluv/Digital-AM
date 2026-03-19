@@ -1,4 +1,4 @@
-﻿# Digital AM Automation - React Version
+﻿# ViralDental.marketing Automation - React Version
 
 Este proyecto fue migrado de HTML/CSS/JS plano a React + Vite.
 
@@ -25,17 +25,17 @@ npm run dev
 - `legacy-index.html`: respaldo del HTML original.
 
 ---
-# ðŸš€ Digital AM Automation - Premium Landing Page
+# ðŸš€ ViralDental.marketing Automation - Premium Landing Page
 
 **Automated systems that turn visitors into paying clients.**
 
-A premium dark mode landing page built for Digital AM Automation, showcasing AI-powered client acquisition systems for local businesses.
+A premium dark mode landing page built for ViralDental.marketing Automation, showcasing AI-powered client acquisition systems for local businesses.
 
 ---
 
 ## ðŸ“‹ Project Overview
 
-- **Business**: Digital AM Automation
+- **Business**: ViralDental.marketing Automation
 - **Industry**: Tech / AI Automation / Digital Marketing
 - **Style**: Tech/Startup with Dark Luxury aesthetic
 - **Primary Color**: Electric Blue (#3B82F6)
@@ -128,7 +128,7 @@ Currently, the website uses **premium SVG placeholders** that look professional.
 ### 1. **Logo** (`images/logo.png`)
 **Prompt:**
 ```
-Modern minimalist logo for Digital AM Automation, Tech AI Automation industry, 
+Modern minimalist logo for ViralDental.marketing Automation, Tech AI Automation industry, 
 featuring electric blue #3B82F6 as primary color, dark background, 
 premium aesthetic, clean design, professional, scalable icon combining letters 
 DA or AM with automation circuit elements, vector style, high contrast, 
@@ -138,7 +138,7 @@ luxury tech feel, futuristic, 512x512px, transparent background
 ### 2. **Hero Visual** (`images/hero_visual.png`)
 **Prompt:**
 ```
-Premium hero section visual for Digital AM Automation, Tech AI Automation industry,
+Premium hero section visual for ViralDental.marketing Automation, Tech AI Automation industry,
 featuring electric blue #3B82F6 glowing elements, 3D abstract shapes representing 
 AI neural networks and automation circuits, dark luxury background, futuristic 
 aesthetic, floating holographic particles, depth, cinematic composition, 
@@ -321,7 +321,7 @@ Replace these placeholders in `index.html`:
 
 ## ðŸŽ¯ Built For
 
-**Digital AM Automation**  
+**ViralDental.marketing Automation**  
 Automated systems that turn visitors into paying clients.
 
 We build automated client acquisition systems for local businesses.
@@ -332,8 +332,8 @@ and book appointments automatically.
 
 ## ðŸ“ License
 
-This project was built specifically for Digital AM Automation.
-All rights reserved Â© 2026 Digital AM Automation.
+This project was built specifically for ViralDental.marketing Automation.
+All rights reserved Â© 2026 ViralDental.marketing Automation.
 
 ---
 

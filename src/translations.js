@@ -139,7 +139,7 @@
         "footer-company": "Company",
         "footer-connect": "Connect",
         "footer-email-us": "Email Us",
-        "footer-rights": "Â© 2026 Digital AM Automation. All rights reserved.",
+        "footer-rights": "Â© 2026 ViralDental.marketing Automation. All rights reserved.",
         "footer-privacy": "Privacy Policy",
         "footer-terms": "Terms of Service",
         "whatsapp-tooltip": "Need help? Chat with us"
@@ -284,10 +284,11 @@
         "footer-company": "Empresa",
         "footer-connect": "Conecto",
         "footer-email-us": "EscrÃ­benos",
-        "footer-rights": "Â© 2026 Digital AM Automation. Todos los derechos reservados.",
+        "footer-rights": "Â© 2026 ViralDental.marketing Automation. Todos los derechos reservados.",
         "footer-privacy": "PolÃ­tica de Privacidad",
         "footer-terms": "TÃ©rminos de Servicio",
         "whatsapp-tooltip": "Â¿Necesitas ayuda? Chatea con nosotros"
     }
 };
-
+
+

@@ -77,7 +77,7 @@ async function generateImage(prompt) {
 }
 
 async function main() {
-  console.log(`\n🎨 Digital AM — Premium Image Generation`);
+  console.log(`\n🎨 ViralDental.marketing — Premium Image Generation`);
   console.log(`   Model: ${MODEL}`);
   console.log(`   Output: public/ai-images/\n`);
 

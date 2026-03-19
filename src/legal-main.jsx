@@ -4,8 +4,8 @@ import { Mail, ShieldCheck } from "lucide-react";
 import "./index.css";
 
 const currentDate = "March 12, 2026";
-const brandName = "Digital AM";
-const domain = "https://digitalamwebsites.com";
+const brandName = "ViralDental.marketing";
+const domain = "https://viraldental.marketing";
 const contactEmail = "ferkmas88@gmail.com";
 
 const legalPages = {
@@ -13,7 +13,7 @@ const legalPages = {
     title: `Privacy Policy | ${brandName}`,
     pageTitle: "Privacy Policy",
     intro:
-      "Digital AM respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you submit your information through our website, QR forms, landing pages, or other signup methods.",
+      "ViralDental.marketing respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you submit your information through our website, QR forms, landing pages, or other signup methods.",
     sections: [
       {
         heading: "Effective Date",
