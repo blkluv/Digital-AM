@@ -140,50 +140,51 @@ export const siteCopy = {
       eyebrow: "Digital marketing studio · Atlanta, Georgia",
       title: "Digital marketing for modern dental practices",
       subtitle: "Websites, automation and lead infrastructure designed to convert attention into patients.",
-      primaryCta: { label: "Explore the platform", href: "#platform" },
+      primaryCta: { label: "Book a consultation", href: "https://calendly.com/viraldentalmarketing" },
       secondaryCta: { label: "View work", href: "#work" },
     },
     system: {
-      title: "One connected growth system",
-      text: "From first visit to follow-up, every step of the customer journey should move forward without friction.",
+      title: "The Growth System Built for DSOs",
+      text: "From the moment a patient sees your ad to their first visit and beyond, every step of the journey should feel seamless.",
       flow: ["Traffic", "Website", "Lead Capture", "Automation", "CRM", "Customer"],
     },
-    problem: {
-      title: "Most businesses lose opportunities before the conversation even starts",
-      items: [
-        {
-          title: "Outdated presence",
-          text: "Weak digital presence reduces trust before the conversation even begins.",
-        },
-        {
-          title: "Lost leads",
-          text: "Visitors show interest but slow or unclear contact routes make opportunities disappear.",
-        },
-        {
-          title: "Slow follow-up",
-          text: "Without automation or structure, warm inquiries go cold before receiving attention.",
-        },
-      ],
+problem: {
+  title: "Most dental practices lose new patients before they ever book",
+  items: [
+    {
+      title: "First impression fails",
+      text: "An outdated website makes patients question your quality before you get a chance to impress.",
+    },
+    {
+      title: "Leaks in the funnel",
+      text: "Potential new patients visit your site but don't call — and without automated capture, they're gone forever.",
+    },
+    {
+      title: "Slow or no response",
+      text: "Warm leads go cold when voicemails aren't returned or follow-ups take hours instead of minutes.",
+    },
+  ],
+}
     },
     platform: {
-      eyebrow: "ViralDental.marketing Platform",
-      title: "Digital infrastructure designed to attract, capture and convert.",
+      eyebrow: "Viral dental marketing Platform",
+      title: "Turn more website visitors into paying patients automatically.",
       modules: [
         {
-          title: "Website System",
-          text: "Premium websites built to communicate value clearly and build trust immediately.",
+          title: "Patient-Attracting Websites",
+          text: "Sites built to build trust instantly, answer patient questions, and make the phone ring.",
         },
         {
-          title: "Lead Capture",
-          text: "Smart forms and messaging routes that convert visits into real inquiries.",
+          title: "Lead Capture That Converts",
+          text: "Smart forms and click-to-text that capture every visitor, even when they don't call.",
         },
         {
-          title: "Automation",
-          text: "SMS and workflow automation that responds instantly and keeps leads moving.",
+          title: "Instant Follow-Up Automation",
+          text: "24/7 SMS and email sequences that respond in seconds and never let a lead go cold.",
         },
         {
-          title: "CRM Structure",
-          text: "Organized pipelines that ensure every opportunity is tracked and moves forward.",
+          title: "New Patient Pipeline",
+          text: "A CRM built for dentistry that tracks every lead from first click to first visit.",
         },
       ],
     },
@@ -215,16 +216,16 @@ export const siteCopy = {
       ],
     },
     technology: {
-      title: "Technology behind the system",
-      text: "The goal is not technology for show. It is technology used to build faster, cleaner and more reliable digital infrastructure.",
-      items: ["React", "Next.js", "Node.js", "Automation workflows", "Cloud infrastructure", "Messaging systems", "AI integration"],
+      title: "Paid ads that deliver. Software that follows through.",
+      text: "Google, Facebook, and TikTok bring new patients to your site. We make sure they actually book — with modern automation that works alongside Dentrix, Eaglesoft, or Open Dental.",
+      items: ["Google/Facebook/TikTok ads", "Websites that convert", "AI receptionist", "24/7 lead capture", "Instant text follow-ups", "Two-way PMS texting", "Recall automation", "Text-to-pay links"],
     },
     cta: {
-      title: "Build the digital base your business needs",
-      text: "Whether you need a stronger website, better lead capture or smarter follow-up systems, ViralDental.marketing helps you build it with clarity.",
+      title: "Your software works harder. You focus on dentistry.",
+      text: "Stop fighting outdated tools. We add modern automation to whatever you already use — Dentrix, Eaglesoft, Open Dental, you name it.",
       primaryCta: "Book a consultation",
-      email: "ferkmas88@gmail.com",
-      location: "Louisville, Kentucky",
+      email: "hi@viraldental.marketing",
+      location: "Atlanta, Georgia",
     },
     contact: {
       formTitle: "Tell us about your business",
@@ -243,7 +244,7 @@ export const siteCopy = {
     },
     footer: {
       copyright: "© {year} ViralDental.marketing.",
-      credit: "Strategy, design and development by Fernando Martinez.",
+      credit: "Viral Dental Marketing",
     },
   },
 };
