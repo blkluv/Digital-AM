@@ -114,7 +114,7 @@ export const siteCopy = {
         incomplete: "Completa todos los campos antes de enviar.",
         success: "Enviado. Te responderé pronto.",
         localPreview: "Abre desde el sitio publicado.",
-        fallback: "Envíame un correo directo a ferkmas88@gmail.com.",
+        fallback: "Envíame un correo directo a hi@viraldental.marketing.",
       },
     },
     footer: {
@@ -238,7 +238,7 @@ export const siteCopy = {
         incomplete: "Complete all fields before sending.",
         success: "Sent. I will reply soon.",
         localPreview: "Open from the published site.",
-        fallback: "Email me directly at ferkmas88@gmail.com.",
+        fallback: "Email me directly at hi@viraldental.marketing.",
       },
     },
     footer: {
