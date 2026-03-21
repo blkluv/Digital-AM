@@ -8,9 +8,9 @@ export const siteCopy = {
       headerCta: "Reservar consulta",
     },
     nav: [
-      { label: "Plataforma", href: "#platform" },
-      { label: "Trabajos", href: "#work" },
-      { label: "Contacto", href: "#contact" },
+      { label: "Platform", href: "#platform" },
+      { label: "Work", href: "#work" },
+      { label: "Contact", href: "#contact" },
     ],
     hero: {
       eyebrow: "Estudio de marketing digital · Atlanta, Georgia",
