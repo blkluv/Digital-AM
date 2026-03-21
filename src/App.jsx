@@ -58,7 +58,7 @@ export default function App() {
       payload.append("_replyto", form.email);
       payload.append("_subject", "New contact from ViralDental.marketing");
       payload.append("_template", "table");
-      const res = await fetch("https://formsubmit.co/ajax/ferkmas88@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/hi@viraldental.marketing", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: payload,
@@ -418,8 +418,8 @@ export default function App() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117]/85 via-[#0D1117]/30 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117]/60 to-transparent" />
               <div className="absolute left-8 top-1/2 -translate-y-1/2 max-w-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Mobile-first</p>
-                <p className="mt-2 text-2xl font-semibold text-white">Every inquiry captured, wherever it comes from.</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Zero-risk paid ads</p>
+                <p className="mt-2 text-2xl font-semibold text-white">More patients than your last agency, or it's free.</p>
               </div>
             </motion.div>
           </div>
