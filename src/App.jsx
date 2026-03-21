@@ -88,7 +88,7 @@ export default function App() {
         <div className="mx-auto flex max-w-8xl items-center justify-between px-6 py-5 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
             <div className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.04]">
-              <span className="text-xs font-bold tracking-[0.2em] text-blue-300">AM</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-blue-300"></span>
             </div>
             <span className="text-[15px] font-semibold text-white">{copy.brand.name}</span>
           </a>
