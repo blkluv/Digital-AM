@@ -484,3 +484,19 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+/* Hide the "AM" that appears before the logo text */
+.nav-logo .logo-placeholder::before,
+.footer-logo::before,
+.nav-logo::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure only your text shows */
+.nav-logo .logo-text,
+.footer-logo span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: inherit;
+}
