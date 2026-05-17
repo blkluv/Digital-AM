@@ -13,7 +13,7 @@ export const siteCopy = {
       { label: "Contact", href: "#contact" },
       { label: "Portfolio", href: "https://pitch.com/v/viral-dental-marketing-xg868n" },
       { label: "Marketing Quiz", href: "https://tally.so/r/rjJAlX" },
-      { label: "Pricing", href: "https://tally.so/forms/EkZQGL/" },
+      { label: "Pricing", href: "https://tally.so/r/EkZQGL" },
     ],
     hero: {
       eyebrow: "Estudio de marketing digital · Atlanta, Georgia",
@@ -140,7 +140,7 @@ export const siteCopy = {
       { label: "Contact", href: "#contact" },
       { label: "Portfolio", href: "https://pitch.com/v/viral-dental-marketing-xg868n" },
       { label: "Marketing Quiz", href: "https://tally.so/r/rjJAlX" },
-      { label: "Pricing", href: "https://tally.so/forms/EkZQGL/" },
+      { label: "Pricing", href: "https://tally.so/r/EkZQGL" },
     ],
     hero: {
       eyebrow: "Digital marketing studio · Atlanta, Georgia",
