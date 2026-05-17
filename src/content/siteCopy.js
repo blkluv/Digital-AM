@@ -11,7 +11,8 @@ export const siteCopy = {
       { label: "Platform", href: "#platform" },
       { label: "Work", href: "#work" },
       { label: "Contact", href: "#contact" },
-      { label: "Pricing", href: "https://tally.so/r/rjJAlX" },
+      { label: "Marketing Quiz", href: "https://tally.so/r/rjJAlX" },
+      { label: "Pricing", href: "https://tally.so/forms/EkZQGL/" },
     ],
     hero: {
       eyebrow: "Estudio de marketing digital · Atlanta, Georgia",
@@ -136,7 +137,8 @@ export const siteCopy = {
       { label: "Platform", href: "#platform" },
       { label: "Work", href: "#work" },
       { label: "Contact", href: "#contact" },
-      { label: "Pricing", href: "https://tally.so/r/rjJAlX" },
+      { label: "Marketing Quiz", href: "https://tally.so/r/rjJAlX" },
+      { label: "Pricing", href: "https://tally.so/forms/EkZQGL/" },
     ],
     hero: {
       eyebrow: "Digital marketing studio · Atlanta, Georgia",
