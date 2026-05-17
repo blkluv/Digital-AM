@@ -89,11 +89,11 @@ export default function App() {
           
           {/* LOGO + BRAND */}
           <a href="#top" className="flex items-center gap-3">
-            <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+            <div className="flex items-center justify-center w-10 h-10 overflow-hidden border rounded-xl bg-white/5 border-white/10">
               <img
                 src="/viraldental.marketinglogo.png"
                 alt="ViralDental Logo"
-                className="object-cover w-full h-full rounded-xl"
+                className="object-contain h-7 w-7"
               />
             </div>
 

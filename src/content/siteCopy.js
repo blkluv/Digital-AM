@@ -11,6 +11,7 @@ export const siteCopy = {
       { label: "Platform", href: "#platform" },
       { label: "Work", href: "#work" },
       { label: "Contact", href: "#contact" },
+      { label: "Pricing", href: "https://tally.so/r/rjJAlX" },
     ],
     hero: {
       eyebrow: "Estudio de marketing digital · Atlanta, Georgia",
@@ -233,12 +234,12 @@ export const siteCopy = {
         email: { placeholder: "Email" },
         message: { placeholder: "What do you need to solve?" },
       },
-      actions: { submit: "Book a consultation", submitting: "Sending...", direct: "Email me directly" },
+      actions: { submit: "Book a consultation", submitting: "Sending...", direct: "Email us directly" },
       messages: {
         incomplete: "Complete all fields before sending.",
         success: "Sent. I will reply soon.",
         localPreview: "Open from the published site.",
-        fallback: "Email me directly at hi@viraldental.marketing.",
+        fallback: "Email us directly at hi@viraldental.marketing.",
       },
     },
     footer: {
