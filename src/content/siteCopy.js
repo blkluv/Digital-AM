@@ -136,6 +136,7 @@ export const siteCopy = {
       { label: "Platform", href: "#platform" },
       { label: "Work", href: "#work" },
       { label: "Contact", href: "#contact" },
+      { label: "Pricing", href: "https://tally.so/r/rjJAlX" },
     ],
     hero: {
       eyebrow: "Digital marketing studio · Atlanta, Georgia",
