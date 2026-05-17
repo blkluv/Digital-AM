@@ -80,77 +80,150 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#070809] font-sans text-[#F5F7FA]">
       {/* Subtle top glow */}
-      <div className="pointer-events-none fixed inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+      <div className="fixed inset-x-0 top-0 h-px pointer-events-none bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_60%_40%_at_50%_-10%,rgba(59,130,246,0.06),transparent)]" />
 
-      {/* ── HEADER ── */}
-      <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#070809]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-8xl items-center justify-between px-6 py-5 lg:px-8">
-          <a href="#top" className="flex items-center gap-3">
-            <div className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.04]">
-              <span className="text-xs font-bold tracking-[0.2em] text-blue-300"></span>
-            </div>
-            <span className="text-[15px] font-semibold text-white">{copy.brand.name}</span>
-          </a>
+/* ── HEADER ── */
+<header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#070809]/80 backdrop-blur-xl">
+  <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-8xl lg:px-8">
+    
+    {/* LOGO + BRAND */}
+    <a href="#top" className="flex items-center gap-3">
+      <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+        <Image
+          src="/logo.png"
+          alt="ViralDental Logo"
+          width={36}
+          height={36}
+          className="object-cover w-full h-full rounded-xl"
+          priority
+        />
+      </div>
 
-          <nav className="hidden items-center gap-10 lg:flex">
-            {copy.nav.map((item) => (
-              <a key={item.href} href={item.href}
-                className="text-sm font-medium text-[#9AA3AE] transition-colors hover:text-white">
-                {item.label}
-              </a>
-            ))}
-          </nav>
+      <span className="text-[15px] font-semibold text-white">
+        {copy.brand.name}
+      </span>
+    </a>
 
-          <div className="flex items-center gap-3">
-            <div className="inline-flex items-center rounded-lg border border-white/8 bg-white/[0.03] p-0.5">
-              {locales.map((code) => (
-                <button key={code} type="button" onClick={() => setLocale(code)}
-                  className={`rounded-md px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
-                    locale === code ? "bg-white/10 text-white" : "text-[#9AA3AE] hover:text-white"
-                  }`}>
-                  {code}
-                </button>
-              ))}
-            </div>
-            <a href="#contact" {...flowButtonProps}
-              className="flow-button hidden items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90 sm:inline-flex">
-              {copy.brand.headerCta}
-            </a>
-            <button type="button" onClick={() => setMobileMenuOpen(true)}
-              className="rounded-xl border border-white/8 bg-white/[0.03] p-2.5 text-[#9AA3AE] transition hover:text-white lg:hidden">
-              <Menu className="h-5 w-5" />
-            </button>
-          </div>
+    {/* DESKTOP NAV */}
+    <nav className="items-center hidden gap-10 lg:flex">
+      {copy.nav.map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          className="text-sm font-medium text-[#9AA3AE] transition-colors hover:text-white"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    {/* RIGHT SIDE */}
+    <div className="flex items-center gap-3">
+
+      {/* LANGUAGE SWITCHER */}
+      <div className="inline-flex items-center rounded-lg border border-white/8 bg-white/[0.03] p-0.5">
+        {locales.map((code) => (
+          <button
+            key={code}
+            type="button"
+            onClick={() => setLocale(code)}
+            className={`rounded-md px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
+              locale === code
+                ? "bg-white/10 text-white"
+                : "text-[#9AA3AE] hover:text-white"
+            }`}
+          >
+            {code}
+          </button>
+        ))}
+      </div>
+
+      {/* CTA BUTTON */}
+      <a
+        href="#contact"
+        {...flowButtonProps}
+        className="flow-button hidden items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90 sm:inline-flex"
+      >
+        {copy.brand.headerCta}
+      </a>
+
+      {/* MOBILE MENU BUTTON */}
+      <button
+        type="button"
+        onClick={() => setMobileMenuOpen(true)}
+        className="rounded-xl border border-white/8 bg-white/[0.03] p-2.5 text-[#9AA3AE] transition hover:text-white lg:hidden"
+      >
+        <Menu className="w-5 h-5" />
+      </button>
+    </div>
+  </div>
+</header>
+
+/* ── MOBILE MENU ── */
+{mobileMenuOpen && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.15 }}
+    className="fixed inset-0 z-[60] flex flex-col bg-[#070809] lg:hidden"
+  >
+
+    {/* MOBILE HEADER */}
+    <div className="flex items-center justify-between border-b border-white/[0.06] px-6 py-5">
+
+      <div className="flex items-center gap-3">
+        <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+          <Image
+            src="/viraldental.marketinglogo.png"
+            alt="ViralDental Logo"
+            width={36}
+            height={36}
+            className="object-cover w-full h-full rounded-xl"
+            priority
+          />
         </div>
-      </header>
 
-      {/* ── MOBILE MENU ── */}
-      {mobileMenuOpen && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.15 }}
-          className="fixed inset-0 z-[60] flex flex-col bg-[#070809] lg:hidden">
-          <div className="flex items-center justify-between border-b border-white/[0.06] px-6 py-5">
-            <span className="text-[15px] font-semibold text-white">{copy.brand.name}</span>
-            <button type="button" onClick={() => setMobileMenuOpen(false)} className="rounded-xl border border-white/8 p-2.5 text-[#9AA3AE]">
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-          <nav className="flex flex-col gap-1 p-6">
-            {copy.nav.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-medium text-[#D3D8E0] transition hover:bg-white/[0.04] hover:text-white">
-                {item.label}
-              </a>
-            ))}
-          </nav>
-          <div className="px-6">
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#070809]">
-              {copy.brand.headerCta}
-            </a>
-          </div>
-        </motion.div>
-      )}
+        <span className="text-[15px] font-semibold text-white">
+          {copy.brand.name}
+        </span>
+      </div>
+
+      <button
+        type="button"
+        onClick={() => setMobileMenuOpen(false)}
+        className="rounded-xl border border-white/8 p-2.5 text-[#9AA3AE]"
+      >
+        <X className="w-5 h-5" />
+      </button>
+    </div>
+
+    {/* MOBILE NAV */}
+    <nav className="flex flex-col gap-1 p-6">
+      {copy.nav.map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          onClick={() => setMobileMenuOpen(false)}
+          className="rounded-xl px-4 py-4 text-lg font-medium text-[#D3D8E0] transition hover:bg-white/[0.04] hover:text-white"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    {/* MOBILE CTA */}
+    <div className="px-6">
+      <a
+        href="#contact"
+        onClick={() => setMobileMenuOpen(false)}
+        className="flex items-center justify-center rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#070809]"
+      >
+        {copy.brand.headerCta}
+      </a>
+    </div>
+  </motion.div>
+)}
 
       <main id="top">
 
@@ -163,19 +236,19 @@ export default function App() {
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0">
             <img src="/ai-images/hero.png" alt="Digital systems visualization"
-              className="w-full h-full object-cover object-center" />
+              className="object-cover object-center w-full h-full" />
             <div className="absolute inset-0" style={{background: 'linear-gradient(180deg, rgba(7,8,9,0.55) 0%, rgba(7,8,9,0.7) 50%, rgba(7,8,9,1) 100%)'}} />
             <div className="absolute inset-0" style={{background: 'linear-gradient(90deg, rgba(7,8,9,0.85) 0%, rgba(7,8,9,0.4) 60%, rgba(7,8,9,0) 100%)'}} />
           </motion.div>
 
           {/* Text content */}
-          <div className="relative z-10 mx-auto max-w-8xl w-full px-6 pt-36 pb-32 lg:px-8 lg:pt-44 lg:pb-40">
+          <div className="relative z-10 w-full px-6 pb-32 mx-auto max-w-8xl pt-36 lg:px-8 lg:pt-44 lg:pb-40">
             <div className="max-w-2xl">
               <motion.p {...fadeUp} className="mb-6 text-sm font-medium text-[#9AA3AE]">
                 {copy.hero.eyebrow}
               </motion.p>
               <motion.h1 {...fadeUp} transition={{ duration: 0.65, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-hero-sm font-semibold text-white lg:text-hero">
+                className="font-semibold text-white font-display text-hero-sm lg:text-hero">
                 {copy.hero.title}
               </motion.h1>
               <motion.p {...fadeUp} transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -183,16 +256,16 @@ export default function App() {
                 {copy.hero.subtitle}
               </motion.p>
               <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-10 flex flex-wrap items-center gap-4">
+                className="flex flex-wrap items-center gap-4 mt-10">
                 <a href={copy.hero.primaryCta.href} {...flowButtonProps}
                   className="flow-button inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90">
                   {copy.hero.primaryCta.label}
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </a>
                 <a href={copy.hero.secondaryCta.href}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-[#9AA3AE] transition hover:text-white">
                   {copy.hero.secondaryCta.label}
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </motion.div>
             </div>
@@ -200,9 +273,9 @@ export default function App() {
 
           {/* Scroll cue */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 0.6 }}
-            className="relative z-10 pb-10 flex justify-center">
+            className="relative z-10 flex justify-center pb-10">
             <a href="#system" className="flex flex-col items-center gap-2 text-[#9AA3AE]/50 transition hover:text-[#9AA3AE]">
-              <ChevronDown className="h-5 w-5 animate-bounce" />
+              <ChevronDown className="w-5 h-5 animate-bounce" />
             </a>
           </motion.div>
         </section>
@@ -211,9 +284,9 @@ export default function App() {
             2. SYSTEM VISUAL
         ══════════════════════════════════════ */}
         <section id="system" className="border-t border-white/[0.06] bg-[#0D1117]">
-          <div className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
+          <div className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
             <motion.div {...fadeUp} className="text-center">
-              <h2 className="font-display text-section-sm font-semibold text-white lg:text-section">
+              <h2 className="font-semibold text-white font-display text-section-sm lg:text-section">
                 {copy.system.title}
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-lg text-[#9AA3AE]">{copy.system.text}</p>
@@ -221,7 +294,7 @@ export default function App() {
 
             {/* Flow diagram */}
             <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-16 flex flex-wrap items-center justify-center gap-3">
+              className="flex flex-wrap items-center justify-center gap-3 mt-16">
               {copy.system.flow.map((step, i) => (
                 <React.Fragment key={step}>
                   <div className="flex items-center gap-3">
@@ -234,10 +307,10 @@ export default function App() {
                     </div>
                   </div>
                   {i < copy.system.flow.length - 1 && (
-                    <div className="h-px w-8 bg-gradient-to-r from-white/20 to-white/5 hidden sm:block" />
+                    <div className="hidden w-8 h-px bg-gradient-to-r from-white/20 to-white/5 sm:block" />
                   )}
                   {i < copy.system.flow.length - 1 && (
-                    <ArrowRight className="h-4 w-4 text-white/20 sm:hidden" />
+                    <ArrowRight className="w-4 h-4 text-white/20 sm:hidden" />
                   )}
                 </React.Fragment>
               ))}
@@ -256,8 +329,8 @@ export default function App() {
         {/* ══════════════════════════════════════
             3. PROBLEM
         ══════════════════════════════════════ */}
-        <section className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
-          <motion.h2 {...fadeUp} className="font-display text-section-sm font-semibold text-white lg:text-section max-w-3xl">
+        <section className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
+          <motion.h2 {...fadeUp} className="max-w-3xl font-semibold text-white font-display text-section-sm lg:text-section">
             {copy.problem.title}
           </motion.h2>
 
@@ -277,31 +350,31 @@ export default function App() {
             4. PLATFORM
         ══════════════════════════════════════ */}
         <section id="platform" className="border-t border-white/[0.06] bg-[#0D1117]">
-          <div className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
+          <div className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
             <motion.div {...fadeUp}>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
                 {copy.platform.eyebrow}
               </p>
-              <h2 className="font-display mt-4 max-w-2xl text-section-sm font-semibold text-white lg:text-section">
+              <h2 className="max-w-2xl mt-4 font-semibold text-white font-display text-section-sm lg:text-section">
                 {copy.platform.title}
               </h2>
             </motion.div>
 
             {/* 2×2 grid */}
-            <div className="mt-16 grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 mt-16 md:grid-cols-2">
               {copy.platform.modules.map((mod, i) => (
                 <motion.div key={mod.title} {...flowCardProps} {...fadeUp}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
                   className="flow-surface rounded-[20px] border border-white/[0.07] bg-[#14171C] p-8 lg:p-10">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9AA3AE]/50">0{i + 1}</p>
-                  <h3 className="flow-child mt-4 text-2xl font-semibold text-white">{mod.title}</h3>
+                  <h3 className="mt-4 text-2xl font-semibold text-white flow-child">{mod.title}</h3>
                   <p className="flow-child mt-3 text-base leading-7 text-[#9AA3AE]">{mod.text}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Automation + Dashboard visual duo */}
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 mt-6 md:grid-cols-2">
               <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}
                 className="relative overflow-hidden rounded-[20px] border border-white/[0.07]">
                 <img src="/ai-images/automation.png" alt="Automation"
@@ -329,12 +402,12 @@ export default function App() {
         {/* ══════════════════════════════════════
             5. WORK
         ══════════════════════════════════════ */}
-        <section id="work" className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
-          <motion.h2 {...fadeUp} className="font-display text-section-sm font-semibold text-white lg:text-section">
+        <section id="work" className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
+          <motion.h2 {...fadeUp} className="font-semibold text-white font-display text-section-sm lg:text-section">
             {copy.work.title}
           </motion.h2>
 
-          <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 mt-16 lg:grid-cols-3">
             {copy.work.items.map((project, index) => {
               const domain = getProjectDomain(project.href);
               return (
@@ -353,7 +426,7 @@ export default function App() {
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <iframe src={project.href} title={project.title} loading="lazy"
                         onLoad={() => setPreviewLoaded(p => ({ ...p, [project.title]: true }))}
-                        className="pointer-events-none absolute left-0 top-0 border-0"
+                        className="absolute top-0 left-0 border-0 pointer-events-none"
                         style={{ width: "160%", height: "160%", transform: "scale(0.625)", transformOrigin: "top left" }} />
                       <div className={`pointer-events-none absolute inset-0 bg-[#091426] transition-opacity duration-700 ${
                         previewLoaded[project.title] ? "opacity-0" : "opacity-100"}`} />
@@ -365,8 +438,8 @@ export default function App() {
                   </div>
 
                   {/* Info */}
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="flow-child text-xl font-semibold text-white">{project.title}</h3>
+                  <div className="flex flex-col flex-1 p-6">
+                    <h3 className="text-xl font-semibold text-white flow-child">{project.title}</h3>
                     <p className="flow-child mt-2 text-sm leading-6 text-[#9AA3AE]">{project.text}</p>
                     <div className="mt-4 space-y-2">
                       {project.outcomes.map((o) => (
@@ -378,7 +451,7 @@ export default function App() {
                     </div>
                     <span className="flow-button mt-6 inline-flex items-center gap-2 self-start text-sm font-semibold text-[#9AA3AE] transition group-hover:text-white">
                       {copy.work.linkLabel}
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
                 </motion.a>
@@ -391,10 +464,10 @@ export default function App() {
             6. TECHNOLOGY
         ══════════════════════════════════════ */}
         <section className="border-t border-white/[0.06] bg-[#0D1117]">
-          <div className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
+          <div className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
               <motion.div {...fadeUp}>
-                <h2 className="font-display text-section-sm font-semibold text-white lg:text-section">
+                <h2 className="font-semibold text-white font-display text-section-sm lg:text-section">
                   {copy.technology.title}
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-[#9AA3AE]">{copy.technology.text}</p>
@@ -417,7 +490,7 @@ export default function App() {
                 className="w-full h-[380px] object-cover object-center" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117]/85 via-[#0D1117]/30 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117]/60 to-transparent" />
-              <div className="absolute left-8 top-1/2 -translate-y-1/2 max-w-sm">
+              <div className="absolute max-w-sm -translate-y-1/2 left-8 top-1/2">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Zero-risk paid ads</p>
                 <p className="mt-2 text-2xl font-semibold text-white">More patients than your last agency, or it's free.</p>
               </div>
@@ -428,23 +501,23 @@ export default function App() {
         {/* ══════════════════════════════════════
             7. FINAL CTA
         ══════════════════════════════════════ */}
-        <section id="contact" className="mx-auto max-w-8xl px-6 py-30 lg:px-8">
+        <section id="contact" className="px-6 mx-auto max-w-8xl py-30 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
 
             {/* Left: CTA text */}
             <motion.div {...fadeUp}>
-              <h2 className="font-display text-section-sm font-semibold text-white lg:text-section">
+              <h2 className="font-semibold text-white font-display text-section-sm lg:text-section">
                 {copy.cta.title}
               </h2>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-[#9AA3AE]">{copy.cta.text}</p>
               <div className="mt-10 space-y-4">
                 <a href={`mailto:${copy.cta.email}`}
                   className="flex items-center gap-3 text-[#9AA3AE] transition hover:text-white">
-                  <Mail className="h-4 w-4 text-blue-400" />
+                  <Mail className="w-4 h-4 text-blue-400" />
                   {copy.cta.email}
                 </a>
                 <div className="flex items-center gap-3 text-[#9AA3AE]">
-                  <MapPin className="h-4 w-4 text-blue-400" />
+                  <MapPin className="w-4 h-4 text-blue-400" />
                   {copy.cta.location}
                 </div>
               </div>
@@ -454,7 +527,7 @@ export default function App() {
             <motion.form onSubmit={handleSubmit} {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}
               className="rounded-[24px] border border-white/[0.07] bg-[#0D1117] p-8 lg:p-10">
               <p className="text-lg font-semibold text-white">{copy.contact.formTitle}</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 mt-6 sm:grid-cols-2">
                 <input type="text" required placeholder={copy.contact.fields.name.placeholder}
                   value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
                   className="col-span-1 rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3.5 text-white outline-none placeholder:text-[#9AA3AE]/60 focus:border-blue-500/40 focus:bg-white/[0.05] transition-colors" />
@@ -465,16 +538,16 @@ export default function App() {
               <textarea required placeholder={copy.contact.fields.message.placeholder}
                 value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))}
                 className="mt-4 min-h-[130px] w-full rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3.5 text-white outline-none placeholder:text-[#9AA3AE]/60 focus:border-blue-500/40 focus:bg-white/[0.05] transition-colors" />
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col gap-3 mt-5 sm:flex-row">
                 <button type="submit" disabled={submitState === "submitting"}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90 disabled:opacity-50">
                   {submitState === "submitting" ? copy.contact.actions.submitting : copy.contact.actions.submit}
-                  <Send className="h-4 w-4" />
+                  <Send className="w-4 h-4" />
                 </button>
                 <a href={`mailto:${copy.cta.email}`}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/[0.08] px-6 py-3.5 text-sm font-semibold text-[#9AA3AE] transition hover:border-white/20 hover:text-white">
                   {copy.contact.actions.direct}
-                  <Mail className="h-4 w-4" />
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
               {submitState === "success" && <p className="mt-4 text-sm text-emerald-400">{submitMessage}</p>}
