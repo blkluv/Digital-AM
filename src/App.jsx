@@ -83,147 +83,137 @@ export default function App() {
       <div className="fixed inset-x-0 top-0 h-px pointer-events-none bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_60%_40%_at_50%_-10%,rgba(59,130,246,0.06),transparent)]" />
 
-/* ── HEADER ── */
-<header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#070809]/80 backdrop-blur-xl">
-  <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-8xl lg:px-8">
-    
-    {/* LOGO + BRAND */}
-    <a href="#top" className="flex items-center gap-3">
-      <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
-        <Image
-          src="/logo.png"
-          alt="ViralDental Logo"
-          width={36}
-          height={36}
-          className="object-cover w-full h-full rounded-xl"
-          priority
-        />
-      </div>
+      {/* ── HEADER ── */}
+      <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#070809]/80 backdrop-blur-xl">
+        <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-8xl lg:px-8">
+          
+          {/* LOGO + BRAND */}
+          <a href="#top" className="flex items-center gap-3">
+            <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+              <img
+                src="/viraldental.marketinglogo.png"
+                alt="ViralDental Logo"
+                className="object-cover w-full h-full rounded-xl"
+              />
+            </div>
 
-      <span className="text-[15px] font-semibold text-white">
-        {copy.brand.name}
-      </span>
-    </a>
+            <span className="text-[15px] font-semibold text-white">
+              {copy.brand.name}
+            </span>
+          </a>
 
-    {/* DESKTOP NAV */}
-    <nav className="items-center hidden gap-10 lg:flex">
-      {copy.nav.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          className="text-sm font-medium text-[#9AA3AE] transition-colors hover:text-white"
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+          {/* DESKTOP NAV */}
+          <nav className="items-center hidden gap-10 lg:flex">
+            {copy.nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-[#9AA3AE] transition-colors hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-    {/* RIGHT SIDE */}
-    <div className="flex items-center gap-3">
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-3">
 
-      {/* LANGUAGE SWITCHER */}
-      <div className="inline-flex items-center rounded-lg border border-white/8 bg-white/[0.03] p-0.5">
-        {locales.map((code) => (
-          <button
-            key={code}
-            type="button"
-            onClick={() => setLocale(code)}
-            className={`rounded-md px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
-              locale === code
-                ? "bg-white/10 text-white"
-                : "text-[#9AA3AE] hover:text-white"
-            }`}
-          >
-            {code}
-          </button>
-        ))}
-      </div>
+            {/* LANGUAGE SWITCHER */}
+            <div className="inline-flex items-center rounded-lg border border-white/8 bg-white/[0.03] p-0.5">
+              {locales.map((code) => (
+                <button
+                  key={code}
+                  type="button"
+                  onClick={() => setLocale(code)}
+                  className={`rounded-md px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
+                    locale === code
+                      ? "bg-white/10 text-white"
+                      : "text-[#9AA3AE] hover:text-white"
+                  }`}
+                >
+                  {code}
+                </button>
+              ))}
+            </div>
 
-      {/* CTA BUTTON */}
-      <a
-        href="#contact"
-        {...flowButtonProps}
-        className="flow-button hidden items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90 sm:inline-flex"
-      >
-        {copy.brand.headerCta}
-      </a>
+            {/* CTA BUTTON */}
+            <a
+              href="#contact"
+              {...flowButtonProps}
+              className="flow-button hidden items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-[#070809] transition hover:bg-white/90 sm:inline-flex"
+            >
+              {copy.brand.headerCta}
+            </a>
 
-      {/* MOBILE MENU BUTTON */}
-      <button
-        type="button"
-        onClick={() => setMobileMenuOpen(true)}
-        className="rounded-xl border border-white/8 bg-white/[0.03] p-2.5 text-[#9AA3AE] transition hover:text-white lg:hidden"
-      >
-        <Menu className="w-5 h-5" />
-      </button>
-    </div>
-  </div>
-</header>
-
-/* ── MOBILE MENU ── */
-{mobileMenuOpen && (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.15 }}
-    className="fixed inset-0 z-[60] flex flex-col bg-[#070809] lg:hidden"
-  >
-
-    {/* MOBILE HEADER */}
-    <div className="flex items-center justify-between border-b border-white/[0.06] px-6 py-5">
-
-      <div className="flex items-center gap-3">
-        <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
-          <Image
-            src="/viraldental.marketinglogo.png"
-            alt="ViralDental Logo"
-            width={36}
-            height={36}
-            className="object-cover w-full h-full rounded-xl"
-            priority
-          />
+            {/* MOBILE MENU BUTTON */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="rounded-xl border border-white/8 bg-white/[0.03] p-2.5 text-[#9AA3AE] transition hover:text-white lg:hidden"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+          </div>
         </div>
+      </header>
 
-        <span className="text-[15px] font-semibold text-white">
-          {copy.brand.name}
-        </span>
-      </div>
-
-      <button
-        type="button"
-        onClick={() => setMobileMenuOpen(false)}
-        className="rounded-xl border border-white/8 p-2.5 text-[#9AA3AE]"
-      >
-        <X className="w-5 h-5" />
-      </button>
-    </div>
-
-    {/* MOBILE NAV */}
-    <nav className="flex flex-col gap-1 p-6">
-      {copy.nav.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          onClick={() => setMobileMenuOpen(false)}
-          className="rounded-xl px-4 py-4 text-lg font-medium text-[#D3D8E0] transition hover:bg-white/[0.04] hover:text-white"
+      {/* ── MOBILE MENU ── */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.15 }}
+          className="fixed inset-0 z-[60] flex flex-col bg-[#070809] lg:hidden"
         >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+          {/* MOBILE HEADER */}
+          <div className="flex items-center justify-between border-b border-white/[0.06] px-6 py-5">
+            <div className="flex items-center gap-3">
+              <div className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+                <img
+                  src="/viraldental.marketinglogo.png"
+                  alt="ViralDental Logo"
+                  className="object-cover w-full h-full rounded-xl"
+                />
+              </div>
+              <span className="text-[15px] font-semibold text-white">
+                {copy.brand.name}
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-xl border border-white/8 p-2.5 text-[#9AA3AE]"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
 
-    {/* MOBILE CTA */}
-    <div className="px-6">
-      <a
-        href="#contact"
-        onClick={() => setMobileMenuOpen(false)}
-        className="flex items-center justify-center rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#070809]"
-      >
-        {copy.brand.headerCta}
-      </a>
-    </div>
-  </motion.div>
-)}
+          {/* MOBILE NAV */}
+          <nav className="flex flex-col gap-1 p-6">
+            {copy.nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-4 text-lg font-medium text-[#D3D8E0] transition hover:bg-white/[0.04] hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* MOBILE CTA */}
+          <div className="px-6">
+            <a
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#070809]"
+            >
+              {copy.brand.headerCta}
+            </a>
+          </div>
+        </motion.div>
+      )}
 
       <main id="top">
 
